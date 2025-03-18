@@ -55,5 +55,8 @@ app.post('/transcribe', upload.single('audio'), async (req, res) => {
         res.status(500).json({ error: 'Failed to transcribe audio' });
     }
 });
+app.get('/', (req, res) => {
+    res.send('<h1>Welcome to the Speech-to-Text API</h1><p>Use the <code>/transcribe</code> endpoint to upload audio files.</p>');
+});
 
 app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
