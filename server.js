@@ -17,7 +17,7 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 // Middleware
 // app.use(cors());
 app.use(cors({
-  origin: "https://speech-to-text-app-frontend.vercel.app/",
+  origin: "https://speech-to-text-transcription-frontend-huqgqbm8u.vercel.app/",
   methods: "GET, POST, PUT, DELETE",
   credentials: true
 }));
