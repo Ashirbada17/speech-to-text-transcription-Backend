@@ -15,7 +15,13 @@ const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 // Middleware
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: "https://speech-to-text-app-frontend.vercel.app",
+  methods: "GET, POST, PUT, DELETE",
+  credentials: true
+}));
+
 app.use(express.json());
 const upload = multer({ storage: multer.memoryStorage() });
 
